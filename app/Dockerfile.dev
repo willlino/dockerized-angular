@@ -1,0 +1,4 @@
+FROM node:latest AS base
+EXPOSE 80
+
+WORKDIR /app

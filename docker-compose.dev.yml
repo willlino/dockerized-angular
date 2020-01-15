@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+    app:
+        container_name: app
+        image: app
+        build:
+            context: ./
+            dockerfile: ./app/Dockerfile.dev
+        volumes:
+            - app-volume:/app
+        entrypoint: ./entrypoint.dev.sh
+        ports:
+            - "5000:80"
+
+volumes:
+  app-volume:
+    driver_opts: 
+      type: none
+      # You should change this path to where your angular app is installed
+      device: /C/ProjetosWilliam/projetosLocais/dockerized-angular/app
+      o: bind
