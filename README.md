@@ -3,7 +3,7 @@ Angular application in a docker container, for production and development purpos
 
 
 ## Running in a development mode:
-- In the docker-compose.dev.yml file, change the volume path to path that your angular app is installed in your host machine, in volume section, especifically in volumes -> app-volume -> driver-opts -> device.
+- In the docker-compose.dev.yml file, change the volume path to path that your angular app is installed in your host machine, in volume section, specifically in volumes -> app-volume -> driver-opts -> device.
 - Run the the docker-compose with this command: docker-compose -f docker-compose.dev.yml up --build 
 
 ## Running in a production mode:
